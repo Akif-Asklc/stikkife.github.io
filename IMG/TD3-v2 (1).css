@@ -1,0 +1,111 @@
+html, body{
+    padding : 0px;
+    margin : 0px;
+}
+ 
+main{
+    width : 70%;
+    margin : 0px auto;
+    background-color: floralwhite;
+}
+
+h1{
+    background-color : lightgray;
+    text-align: center;
+    color : red;
+    margin : 0px;
+}
+
+nav > a{
+    display : inline-block;
+    box-sizing: border-box;
+    width : calc(25% - 0.5em);
+    text-align: center;
+    border : 5px;
+    margin: 0px 0.25em;
+    background-color : aqua;
+}
+
+aside{
+    display : inline-block;
+    width : 28%;
+    box-sizing : border-box;
+    vertical-align: text-top;
+    background-color : lightgreen;
+    padding : 0.5% 2%;
+}
+
+section{
+    display : inline-flex;
+    flex-wrap: wrap;
+    width : 71%;
+    box-sizing: border-box;
+    padding : 2%;
+}
+section > article {
+    flex-basis : 50%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+section > article > header {
+    font-weight: 800;
+    color : blue;
+    background-color: lightpink;
+}
+
+section > article > footer {
+    font-weight: 800;
+    color : darkgrey;
+    text-align: right;
+}
+
+section > article >p {
+    -webkit-column-count : 2;
+    -moz-column-count : 2;
+    column-count: 2;
+    padding : 5%;
+}
+
+main > footer {
+    background-color : crimson;
+    color: antiquewhite;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    main{
+        width : 90%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main{
+        width : 96%;
+    }
+    aside {
+        display : block;
+        width : 100%;
+    }
+    section {
+        display : block ; 
+        width : 100%;
+    }
+    section > article > p {
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width : 600px){
+    main{width : 100%;}
+    aside{display : none;}
+    section > article {
+        display : block;
+        width : 90%;
+        margin : 2px auto;
+    }
+    nav > a{
+        display : block;
+        width : 100%;
+    }
+}   
